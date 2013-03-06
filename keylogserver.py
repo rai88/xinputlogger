@@ -10,6 +10,7 @@ conn, addr = s.accept()
 
 f = open('backup.txt', 'w+')
 keymap = open('keymap.txt', 'r+')
+control_keys = ["Shift_L", "Shift_R", "Alt_L", "Alt_R", "Control_L", "Control_R"]
 
 d = {}
 
@@ -34,9 +35,13 @@ while 1:
       if i in d.keys():
         try:
           if q[v-1] != 'press':
-            pass
+            if [di] in control_keys:
+              print d[i],"up"
           else:
-            print d[i]
+            if [di] in control_keys:
+              print d[i],"down"
+            else:
+              print d[i]
         except:
           print d[i]
   except:
