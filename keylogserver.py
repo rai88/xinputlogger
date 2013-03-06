@@ -35,10 +35,10 @@ while 1:
       if i in d.keys():
         try:
           if q[v-1] != 'press':
-            if [di] in control_keys:
+            if d[i] in control_keys:
               print d[i],"up"
           else:
-            if [di] in control_keys:
+            if d[i] in control_keys:
               print d[i],"down"
             else:
               print d[i]
